@@ -1,4 +1,3 @@
-  
 /**
  * _strncat - concatenates two strings
  * @dest: pointer to the destination string
