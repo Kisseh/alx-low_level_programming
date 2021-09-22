@@ -1,19 +1,18 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * _strlen - returns the length of a string
- * @s: string s
- * Return: length of string
+ *_strlen - is used to determine the length of a string.
+ *@s: string to count.
+ *Return: not.
  */
 int _strlen(char *s)
 {
-	int length = 0;
+	int c = 0;
 
-	while (*s)
+
+	for (; *s != '\0'; s++)
 	{
-		length += 1;
-		s += 1;
-
+		c++;
 	}
-	return (length);
+	return (c);
 }
