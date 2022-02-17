@@ -1,18 +1,22 @@
+#- makefile
+
 CC = gcc
-SRC = main.c holberton.c
-OBJ = $(SRC:.c=.o) 
-NAME = holberton
-TOCLEAN = *~ 
-RM = rm -f
+SRC = main.c school.c
+OBJ = ${SRC:.c=.o}
+NAME = school
+RM = rm
 
-all : $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+all: ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
 
-fclean: oclean clean
+clean:
+	${RM} -f *~ ${NAME}
 
 oclean:
-	$(RM) $(OBJ)
+	${RM} -f ${OBJ}
 
-clean :
-	$(RM)  $(TOCLEAN) $(NAME)
+fclean: clean oclean
+
 re: oclean all
+
+.PHONY: clean oclean fclean re
